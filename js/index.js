@@ -16,7 +16,7 @@
         throw new Error(`Failed to fetch data from ${url}`);
       }
   
-      profileStore = await response.json();
+      profileStore = [...await response.json()];
   
       renderProfile(profileStore);
     } catch (error) {
@@ -24,7 +24,7 @@
     }
  }
 
- getProfileData('/db/profiles.json')
+ getProfileData('/./db/profiles.json')
 
 
 
