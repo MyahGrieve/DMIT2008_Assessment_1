@@ -15,7 +15,7 @@
       if (!response.ok) {
         throw new Error(`Failed to fetch data from ${url}`);
       }
-  
+      console.log(url)
       profileStore = [...await response.json()];
   
       renderProfile(profileStore);
