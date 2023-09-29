@@ -24,7 +24,7 @@
     }
  }
 
- getProfileData('../db/profiles.json')
+ getProfileData('/db/profiles.json')
 
 
 
