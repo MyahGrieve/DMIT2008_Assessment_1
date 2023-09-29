@@ -4,7 +4,7 @@
 
  async function getProfileData(url) {
     const response = await fetch(url)
-    profileStore = [... await response.json()]
+    profileStore =  await response.json()
 
     renderProfile(profileStore)
  }
