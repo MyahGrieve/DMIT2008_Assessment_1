@@ -3,10 +3,25 @@
  let profileStore = [];
 
  async function getProfileData(url) {
-    const response = await fetch(url)
-    profileStore =  await response.json()
+   //  const response = await fetch(url)
+   
+   //  profileStore =  await response.json()
 
-    renderProfile(profileStore)
+   //  renderProfile(profileStore)
+
+   try {
+      const response = await fetch(url);
+      
+      if (!response.ok) {
+        throw new Error(`Failed to fetch data from ${url}`);
+      }
+  
+      profileStore = await response.json();
+  
+      renderProfile(profileStore);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
  }
 
  getProfileData('../db/profiles.json')
