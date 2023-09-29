@@ -22,7 +22,7 @@
     
  }
 
- getProfileData('/db/profiles.json')
+ getProfileData('./profiles.json')
 
 
 
