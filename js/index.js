@@ -24,4 +24,4 @@
     });
 
     document.querySelector('#cards').append(container)
- }
+ } 
