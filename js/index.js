@@ -9,7 +9,7 @@
 
    //  renderProfile(profileStore)
 
-   try {
+   console.log(url)
       const response = await fetch(url);
       
       if (!response.ok) {
@@ -19,9 +19,7 @@
       profileStore = [...await response.json()];
   
       renderProfile(profileStore);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+    
  }
 
  getProfileData('/db/profiles.json')
